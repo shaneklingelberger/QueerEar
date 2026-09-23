@@ -6,7 +6,7 @@ In the queer community, there is a term, "gaydar", or the ability to predict whe
 
 Inspired by the hashtags, I used Spotify Web API to determine playlists with the keywords "gay", "homosexual", "pride", "lgbt", "queer" to find songs associated with those terms. This generated 4323 playlists. 
 
-Because the Spotify Web API would not allow me to get each song’s playlist without a business account, I had to shift gears. As a result, I extracted all of the songs in each playlist with playwright.sync_api, which had its own API limitations (about 25 songs per playlist). Unfortunately, the key word “gay” biased Marvin Gaye because of his last name, so I deleted all playlists with his name at this point. This generated 27,192 tracks. 
+Because the Spotify Web API would not allow me to get each song’s playlist without a business account, I had to shift gears. As a result, I extracted all of the songs in each playlist with playwright.sync_api, which had its own API limitations (about 25 songs per playlist). Unfortunately, the key in order to weight him the same as other artists. This generated 27,192 tracks. 
 
 Now, I retrieved the proportion of each artist in all of the tracks. This generated 9363 artists. Originally, I ran the model with this data, but I realized that the proportion biased more popular artists, so I had to factor popularity out. I used “https://groover.co/en/lp/free-tools/spotify-popularity-score/” and the aforementioned playwright.sync_api to get each artist’s popularity. Up until this point, I used Python with Google Gemini to help with API requests.
 
